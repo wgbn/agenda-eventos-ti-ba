@@ -1,0 +1,29 @@
+{
+  "name": "agenda-eventos-ti-ba",
+  "version": "1.0.0",
+  "description": "Agenda de eventos de TI na Bahia implemenada com Angular Firebase e Polymer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wgbn/agenda-eventos-ti-ba.git"
+  },
+  "keywords": [
+    "agenda",
+    "eventos",
+    "ba",
+    "ti",
+    "angular",
+    "polymer",
+    "firebase"
+  ],
+  "author": "Walter Gandarella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wgbn/agenda-eventos-ti-ba/issues"
+  },
+  "homepage": "https://github.com/wgbn/agenda-eventos-ti-ba",
+  "dependencies": {}
+}
