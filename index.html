@@ -33,13 +33,14 @@
     <link rel="import" href="bower_components/paper-input/paper-input.html">
 
     <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/icon-fonts.css"/>
     <link rel="stylesheet" href="bower_components/ocModal/dist/css/ocModal.animations.min.css"/>
     <link rel="stylesheet" href="bower_components/ocModal/dist/css/ocModal.full.css"/>
 </head>
 <body>
     <paper-toolbar ng-controller="MainCtrl">
-        <!--paper-icon-button icon="add" ng-click="clickMenu()"></paper-icon-button-->
         <div class="title">Agenda de Eventos de TI na Bahia</div>
+        <paper-button raised class="branco" ng-click="clickBtnNovoEvento()">Adicionar evento</paper-button>
     </paper-toolbar>
 
     <div ng-view></div>

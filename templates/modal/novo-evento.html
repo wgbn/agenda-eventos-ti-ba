@@ -27,15 +27,13 @@
     }
     .novo-evento p {
         height: 50px;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     .novo-evento .blue {
-        font-family: 'Roboto', 'Noto', sans-serif;
         color: #4285f4;
     }
 </style>
 <div class="novo-evento">
-    <paper-toolbar ng-controller="MainCtrl">
+    <paper-toolbar>
         <paper-icon-button icon="close" ng-click="clickClose()"></paper-icon-button>
         <div class="title">Cadastrar novo evento</div>
     </paper-toolbar>
@@ -54,6 +52,7 @@
             <paper-input label="Seu e-mail" ng-model="evento.email" class="nome-email"></paper-input>
         </div>
         <div class="botoes">
+            <paper-button class="blue" ng-click="clickClose()">Cancelar</paper-button>
             <paper-button class="blue" ng-click="clickEnviar()">Criar evento</paper-button>
         </div>
     </div>

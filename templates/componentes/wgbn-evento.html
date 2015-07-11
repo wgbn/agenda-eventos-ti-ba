@@ -1,33 +1,51 @@
 <style>
     .wgbn-evento {
         float: left;
-        width: 23%;
+        width: 31%;
         margin: 0 2% 2% 0;
-        border: 1px solid rgba(204, 204, 204, 0.48);
         cursor: pointer;
+        -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.4);
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,.4);
+        -webkit-transition: -webkit-box-shadow .5s;
+        transition: box-shadow .5s;
+    }
+    .wgbn-evento:hover {
+        -webkit-box-shadow: 0 1px 10px 0 rgba(0,0,0,.6);
+        box-shadow: 0 1px 10px 0 rgba(0,0,0,.6);
     }
     .wgbn-evento .titulo {
         background-color: #3F51B5;
         padding: 1em .5em;
         color: #fff;
+        text-transform: uppercase;
+        font-size: .9em;
     }
     .wgbn-evento .quando, .wgbn-evento .local, .wgbn-evento .descr {
         background-color: #9FA8DA;
         padding: .7em .5em;
         display: block;
     }
+    .wgbn-evento em {
+        margin-right: .5em;
+    }
     .wgbn-evento .local {
-        background-color: #C5CAE9;
+        background-color: #E8EAF6; /*C5CAE9;*/
+        color: #3F51B5;
+        border-bottom: 1px solid rgba(159, 168, 218, 0.20);
     }
     .wgbn-evento .descr {
         background-color: #E8EAF6;
     }
 </style>
-<paper-material elevation="1" class="wgbn-evento" ng-click="clickEvento()">
-    <h4 class="titulo">{{evtCtrl.evento.nome}}</h4>
+<div class="wgbn-evento" ng-click="clickEvento()">
+    <h4 class="titulo">
+        <em class="ic-ticket"></em>{{evento.nome}}
+    </h4>
     <span class="quando">
-        {{evtCtrl.evento.quando}} às {{evtCtrl.evento.hora}}
+        <em class="ic-calendar"></em>{{evento.quando}} às {{evento.hora}}
     </span>
-    <span class="local">{{evtCtrl.evento.local}}</span>
-    <p class="descr">{{evtCtrl.evento.descricao}}</p>
-</paper-material>
+    <span class="local">
+        <em class="ic-location"></em>{{evento.local}}
+    </span>
+    <p class="descr">{{evento.descricao}}</p>
+</div>

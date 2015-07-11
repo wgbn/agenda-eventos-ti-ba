@@ -10,7 +10,7 @@ agenda
                 },
                 addEvento: function(_evento){
                     sync.$add(_evento);
-                }
+                },
             };
         }
     ])

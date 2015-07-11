@@ -1,3 +1,4 @@
+/* reset css */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -28,7 +29,6 @@ body {
 ol, ul {
     list-style: none;
 }
-/* tables still need 'cellspacing="0"' in the markup */
 table {
     border-collapse: separate;
     border-spacing: 0;
@@ -44,6 +44,10 @@ q:before, q:after {
 blockquote, q {
     quotes: "" "";
 }
+/* styles */
+*, body, html {
+    font-family: 'Roboto', 'Noto', sans-serif;
+}
 .clearfix {
     overflow: auto;
     zoom: 1;
@@ -51,6 +55,10 @@ blockquote, q {
 .colorful {
     background: #4285f4;
     color: #fff;
+}
+.branco {
+    background-color: #fff;
+    color: #4285f4;
 }
 .toolbar-tools.paper-toolbar > .title {
     margin-left: 0;

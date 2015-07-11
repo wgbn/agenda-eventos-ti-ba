@@ -45,12 +45,11 @@ agenda
             transclude: false,
             scope: true,
             controller: function($scope, $location) {
-                // controller
                 $scope.clickEvento = function(){
-                    console.log(this.evtCtrl.evento.site);
-                    window.location.href = this.evtCtrl.evento.site;
+                    console.log($scope.evento.site);
+                    window.location.href = $scope.evento.site.substr(0,4) == 'http' ? $scope.evento.site : 'http://'+$scope.evento.site;
                 };
-                console.log(this.evento);
+                delete $scope.evento.$$hashKey;
             },
             replace: false,
             controllerAs: 'evtCtrl',
