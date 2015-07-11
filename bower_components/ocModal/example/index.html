@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="app">
+    <head>
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <link rel="stylesheet" href="ocModal.light.css">
+        <link rel="stylesheet" href="ocModal.animations.css">
+    </head>
+
+    <body ng-controller="AppCtrl">
+        <h3>Default</h3>
+        <p><button class="btn btn-primary" oc-modal-open="'partials/modal.html'">Test open</button></p>
+
+        <h3>Transitions :</h3>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'fade-in'}">fade-in</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'slide-down'}">slide-down</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'scale'}">scale</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'fall'}">fall</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'flip-horizontal'}">flip horizontal</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'flip-vertical'}">flip vertical</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'super-scaled'}">super-scaled</button></p>
+        <p><button class="btn btn-primary" oc-modal-open="{url: 'partials/modal.html', cls: 'slit'}">slit</button></p>
+
+        <script type="text/ng-template" id="partials/modal.html">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="closeModal()">&times;</button>
+                <h4 class="modal-title">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <p>One fine body&hellip;</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" ng-click="closeModal()">Close</button>
+                <button type="button" class="btn btn-success">Save changes</button>
+            </div>
+        </script>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.min.js"></script>
+        <script src="ocModal.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

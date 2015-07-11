@@ -44,8 +44,25 @@ q:before, q:after {
 blockquote, q {
     quotes: "" "";
 }
-
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
 .colorful {
     background: #4285f4;
     color: #fff;
+}
+.toolbar-tools.paper-toolbar > .title {
+    margin-left: 0;
+}
+.area {
+    padding: 1em;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+p {
+    padding-bottom: .4em;
+}
+.agenda {
+    max-width: 960px;
+    margin: auto;
 }

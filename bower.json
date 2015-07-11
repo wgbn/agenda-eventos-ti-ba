@@ -34,6 +34,7 @@
     "paper-elements": "PolymerElements/paper-elements#~1.0.1",
     "angular-route": "~1.4.1",
     "iron-elements": "PolymerElements/iron-elements#~1.0.1",
-    "platinum-elements": "PolymerElements/platinum-elements#~1.0.1"
+    "platinum-elements": "PolymerElements/platinum-elements#~1.0.1",
+    "ocModal": "~0.1.10"
   }
 }

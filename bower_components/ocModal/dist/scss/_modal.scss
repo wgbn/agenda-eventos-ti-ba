@@ -1,0 +1,99 @@
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    // IE8 filter
+    $opacity-ie: ($opacity * 100);
+    filter: #{alpha(opacity=$opacity-ie)};
+}
+
+.noOverflow {
+    overflow: hidden;
+}
+
+.modal-wrapper {
+    z-index: $zindex-modal;
+    position: fixed;
+
+    .modal-backdrop {
+        width: 100%;
+        height: 100%;
+        @include opacity($modal-backdrop-opacity);
+    }
+}
+
+.modal {
+    display: block;
+    overflow: auto;
+    text-align: center;
+
+    .modal-dialog {
+        z-index: $zindex-modal + 10;
+        width: auto;
+        text-align: left; /* on rétablit l'alignement du texte */
+        @include perspective(1300px);
+        max-width: 100%;
+
+        &.no-backdrop .modal-backdrop {
+            display: none;
+        }
+
+        .modal-content {
+            z-index: $zindex-modal;
+            border-radius: $modal-border-radius;
+            width: 600px;
+            padding: 10px;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.flexbox {
+    .modal {
+        & > .modal-backdrop {
+            display: none;
+        }
+        .modal-dialog {
+            @include display(flex);
+            @include align-items(center);
+            @include justify-content(center);
+            position: absolute;
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            padding: 10px;
+			max-height: initial;
+        }
+    }
+}
+
+.no-flexbox {
+    .modal-dialog {
+        @include transform(translate(-50%, -50%));
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: 0;
+        padding: 10px;
+        max-height: 100%;
+
+        .modal-backdrop {
+            display: none;
+        }
+    }
+    &.no-csstransforms {
+        .modal-dialog {
+            left: auto;
+            top: auto;
+            margin: auto;
+        }
+    }
+}
+
+// IE7 support
+// Styles that make popup look nicier in old IE
+.lt-ie8 {
+    .modal-content {
+        display: inline;
+        zoom: 1;
+    }
+}

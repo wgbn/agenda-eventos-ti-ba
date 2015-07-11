@@ -1,1 +1,14 @@
-<h2>{{texto}}</h2>
+<div class="area">
+    <p>Bem vindo à agenda de TI da Bahia.</p>
+    <p>Se você vai promover um evento na área de TI, consulte aqui antes para garantir que seu evento não conflitará com outro evento, evitando assim dividir seu público.</p>
+    <p>E, é claro, deixe seu evento registrado aqui também.</p>
+    <p><paper-button raised class="colorful" ng-click="clickBtnNovoEvento()">Adicionar evento</paper-button></p>
+
+    <hr>
+
+    <div class="agenda clearfix">
+
+        <wgbn-evento ng-repeat="evento in eventos" evento="evento"></wgbn-evento>
+
+    </div>
+</div>
