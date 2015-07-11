@@ -9,8 +9,9 @@ agenda
         };
     })
 
-    .controller('ListagemCtrl', function($scope, $ocModal, fireService){
+    .controller('ListagemCtrl', function($scope, $ocModal, fireService, calendrical){
         var lista = fireService.getEventos();
+        $scope.mes = calendrical.getWeeksInMonth(new Date());
         $scope.eventos = [];
 
         lista.$loaded()

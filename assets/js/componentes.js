@@ -59,4 +59,21 @@ agenda
             templateUrl: 'templates/componentes/wgbn-evento.html'
         }
     })
+
+    .directive('wgbnSemanas', function(){
+        return {
+            restrict: 'E',
+            transclude: false,
+            scope: true,
+            controller: function($scope, $location) {
+                //
+            },
+            replace: false,
+            controllerAs: 'mesCtrl',
+            bindToController: {
+                mes: "="
+            },
+            templateUrl: 'templates/componentes/wgbn-semanas.html'
+        }
+    })
 ;

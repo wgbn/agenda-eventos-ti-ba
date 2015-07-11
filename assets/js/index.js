@@ -1,4 +1,4 @@
-var agenda = angular.module('agenda', ['ngRoute', 'ng-polymer-elements', 'firebase', 'oc.modal']);
+var agenda = angular.module('agenda', ['ngRoute', 'ng-polymer-elements', 'firebase', 'oc.modal', 'calendrical']);
 
 agenda.config(function($routeProvider){
     $routeProvider

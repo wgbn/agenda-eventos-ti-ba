@@ -1,0 +1,36 @@
+{
+  "name": "calendrical",
+  "version": "0.0.2",
+  "description": "Convenient date tools for building calendars.",
+  "main": "src/calendrical.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Beckon/calendrical.git"
+  },
+  "keywords": [
+    "date",
+    "dates",
+    "calendar",
+    "calendars",
+    "calculations",
+    "calculator"
+  ],
+  "author": "Douglas Treadwell",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Beckon/calendrical/issues"
+  },
+  "homepage": "https://github.com/Beckon/calendrical",
+  "devDependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
