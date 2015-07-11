@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c332e88-71b7-4fdf-be40-6869795f9de5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/componentes/wgbn-semanas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/componentes.js" afterPath="$PROJECT_DIR$/assets/js/componentes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/controller.js" afterPath="$PROJECT_DIR$/assets/js/controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/index.js" afterPath="$PROJECT_DIR$/assets/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/templates/listagem.html" afterPath="$PROJECT_DIR$/assets/templates/listagem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2c332e88-71b7-4fdf-be40-6869795f9de5" name="Default" comment="" />
     <ignored path="agenda-agenda-eventos-ti.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -291,7 +282,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1600" height="850" extended-state="6" />
+    <frame x="0" y="25" width="1600" height="850" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287858" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
