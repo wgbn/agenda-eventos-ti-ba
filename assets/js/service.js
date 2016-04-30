@@ -1,8 +1,8 @@
 agenda
     .factory('fireService', ["$firebaseArray",
         function($firebaseArray) {
-            var db = new Firebase("https://agenda-ti-ba.firebaseio.com");
-            var sync = $firebaseArray(db.child('agenda'));
+            var db = new Firebase("https://agenda-ti-ba.firebaseio.com/agenda").orderByChild('event_start');
+            var sync = $firebaseArray(db);
 
             return {
                 getEventos: function(){
