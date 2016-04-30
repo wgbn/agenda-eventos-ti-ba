@@ -59,21 +59,4 @@ agenda
             }
         }
     })
-
-    .directive('wgbnSemanas', function(){
-        return {
-            restrict: 'E',
-            transclude: false,
-            scope: true,
-            controller: function($scope, $location) {
-                //
-            },
-            replace: false,
-            controllerAs: 'mesCtrl',
-            bindToController: {
-                mes: "="
-            },
-            templateUrl: 'assets/templates/componentes/wgbn-semanas.html'
-        }
-    })
 ;

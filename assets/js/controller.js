@@ -30,7 +30,7 @@ agenda
         $scope.clickEnviar = function(){
             if ($scope.novo.$valid){
                 var evento = angular.copy($scope.evento);
-                console.log(evento);
+                
                 evento.event_start = parseDate(evento.event_start, true);
                 evento.event_end = parseDate(evento.event_end, true);
 
