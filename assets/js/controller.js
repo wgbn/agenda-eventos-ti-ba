@@ -57,25 +57,5 @@ agenda
             );
             return result.getTime();
         }
-
-        $scope.json = {
-            "name": "Name of specific edition",
-            "location": {
-                "name": "City, State (if applies), Country"
-            },
-            "event_start": "yyyy-mm-dd",
-            "event_end": "yyyy-mm-dd",
-            "cfp_start": "yyyy-mm-dd",
-            "cfp_end": "yyyy-mm-dd",
-            "session_feed": "https://example.com/2016/sessions.json",
-            "speaker_feed": "https://example.com/2016/speakers.json",
-            "hashtag": "#hashtag",
-            "organizers": [
-                {
-                    "name": "Organizer Name",
-                    "twitter": "@twitter_handle"
-                }
-            ]
-        };
     })
 ;
