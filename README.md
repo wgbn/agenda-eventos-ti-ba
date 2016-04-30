@@ -36,8 +36,8 @@ Inspirado na especificação  dada no projeto [devinbahia/agenda](https://github
 
 ### Onde os campos adicionados foram:
 
-* banner: Url da imagem promocional ou banner do evento
-* description: Uma breve descrição do evento
+* **banner**: Url da imagem promocional ou banner do evento
+* **description**: Uma breve descrição do evento
 
 ### E as alterações:
 
