@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c332e88-71b7-4fdf-be40-6869795f9de5" name="Default" comment="reformulando a agenda.&#10;- removido tema material&#10;- adicionado tema BootFlat&#10;- refeito o objeto evento">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="2c332e88-71b7-4fdf-be40-6869795f9de5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="agenda-agenda-eventos-ti.iws" />
@@ -390,7 +389,7 @@
       <option name="presentableId" value="Default" />
       <updated>1436143155131</updated>
       <workItem from="1462012961917" duration="19446000" />
-      <workItem from="1462036892778" duration="33000" />
+      <workItem from="1462036892778" duration="44000" />
     </task>
     <task id="LOCAL-00001" summary="reformulando a agenda.&#10;- removido tema material&#10;- adicionado tema BootFlat&#10;- refeito o objeto evento">
       <created>1462036014250</created>
@@ -399,11 +398,18 @@
       <option name="project" value="LOCAL" />
       <updated>1462036014250</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary=".gitignore">
+      <created>1462036933003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1462036933003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19479000" />
+    <option name="totallyTimeSpent" value="19490000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="30" width="1602" height="871" extended-state="6" />
@@ -414,7 +420,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33015007" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13029525" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32784638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19417475" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -443,7 +449,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="reformulando a agenda.&#10;- removido tema material&#10;- adicionado tema BootFlat&#10;- refeito o objeto evento" />
-    <option name="LAST_COMMIT_MESSAGE" value="reformulando a agenda.&#10;- removido tema material&#10;- adicionado tema BootFlat&#10;- refeito o objeto evento" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
