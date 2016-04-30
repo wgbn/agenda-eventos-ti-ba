@@ -1,0 +1,184 @@
+<style>
+    .novo-evento .conteudo {
+        padding: 1em;
+        margin: 0;
+    }
+    .novo-evento .conteudo label {
+        font-size: .7em;
+        color: #666;
+        text-transform: uppercase;
+    }
+    .novo-evento .conteudo input {
+        margin: .1em 0 .5em;
+    }
+    .novo-evento .conteudo .coluna {
+        padding: 0;
+    }
+    .novo-evento .conteudo .coluna:first-child {
+        padding-right: .5em;
+    }
+    .novo-evento .botoes {
+        margin-top: 1.5em;
+        text-align: right;
+    }
+    .novo-evento .data-hora {
+        float: left;
+        width: 23%;
+        margin-right: 2%;
+    }
+    .novo-evento .site {
+        float: left;
+        width: 50%;
+    }
+    .novo-evento .nome-email {
+        float: left;
+        width: 49%;
+    }
+    .novo-evento .nome-email:first-child {
+        margin-right: 2%;
+    }
+    .novo-evento strong {
+        font-weight: bold;
+    }
+    .novo-evento p {
+        height: 50px;
+    }
+    .novo-evento .blue {
+        color: #4285f4;
+    }
+    .css-form input.ng-invalid.ng-touched {
+        border-color: #FA787E;
+    }
+    .css-form input.ng-valid.ng-touched {
+        border-color: #78FA89;
+    }
+    .novo-evento .conteudo .erro {
+        color: #FA787E;
+        font-size: .8em;
+    }
+    .novo-evento .conteudo .botoes {
+        text-align: right;
+    }
+    .novo-evento .barra-modal {
+        padding: .6em 0;
+        background-color: #37BC9B;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+    .novo-evento .barra-modal h3 {
+        text-align: center;
+        color: #fff;
+    }
+</style>
+<div class="novo-evento">
+    <div class="barra-modal">
+        <h3>Cadastrar Novo Evento</h3>
+    </div>
+    <form name="novo" novalidate class="css-form">
+        <div class="conteudo ">
+
+            <label for="name">Nome do evento
+                <span ng-show="novo.$submitted || novo.evName.$touched">
+                    <span ng-show="novo.evName.$error.required" class="erro"> Obrigatório</span>
+                </span>
+            </label>
+            <input type="text" class="form-control" ng-model="evento.name" id="name" name="evName" required/>
+
+            <label for="location">Local do evento
+                <span ng-show="novo.$submitted || novo.evLocation.$touched">
+                    <span ng-show="novo.evLocation.$error.required" class="erro"> Obrigatório</span>
+                </span>
+            </label>
+            <input type="text" class="form-control" ng-model="evento.location.name" id="location" name="evLocation" required/>
+
+            <label for="description">Breve descrição</label>
+            <input type="text" class="form-control" ng-model="evento.description" id="description"/>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 coluna">
+                        <label for="event_start">Data de início
+                            <span ng-show="novo.$submitted || novo.evStart.$touched">
+                                <span ng-show="novo.evStart.$error.required" class="erro"> Obrigatório</span>
+                                <span ng-show="novo.evStart.$error.minlength" class="erro"> Data & Hora válida</span>
+                            </span>
+                        </label>
+                        <input ng-model="evento.event_start" class="form-control" id="event_start" required minlength="16" name="evStart" wgbn-data-hora />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 coluna">
+                        <label for="event_end">Data de início
+                            <span ng-show="novo.$submitted || novo.evEnd.$touched">
+                                <span ng-show="novo.evEnd.$error.required" class="erro"> Obrigatório</span>
+                                <span ng-show="novo.evEnd.$error.minlength" class="erro"> Data & Hora válida</span>
+                            </span>
+                        </label>
+                        <input ng-model="evento.event_end" class="form-control" id="event_end" required minlength="16" name="evEnd" wgbn-data-hora />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 coluna">
+                        <label for="cfp_start">Início call to papers</label>
+                        <input ng-model="evento.cfp_start" class="form-control" id="cfp_start" wgbn-data />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 coluna">
+                        <label for="cfp_end">Término call to papers</label>
+                        <input ng-model="evento.cfp_end" class="form-control" id="cfp_end" wgbn-data />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 coluna">
+                        <label for="hashtag">Hashtags</label>
+                        <input type="text" class="form-control" ng-model="evento.hashtag" id="hashtag" placeholder="#hashtag"/>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 coluna">
+                        <label for="twitter">Twitter do evento</label>
+                        <input ng-model="evento.twitter" class="form-control" id="twitter" placeholder="@username" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 coluna">
+                        <label for="website">Site do evento</label>
+                        <input ng-model="evento.website" class="form-control" id="website" placeholder="http://" />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 coluna">
+                        <label for="banner">Imagem promocional do evento</label>
+                        <input ng-model="evento.banner" class="form-control" id="banner" placeholder="http://" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 coluna">
+                        <label for="organizers.name">Organizador do evento
+                            <span ng-show="novo.$submitted || novo.evOrgName.$touched">
+                                <span ng-show="novo.evOrgName.$error.required" class="erro"> Obrigatório</span>
+                            </span>
+                        </label>
+                        <input ng-model="evento.organizers.name" class="form-control" id="organizers.name" name="evOrgName" required />
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 coluna">
+                        <label for="organizers.twitter">Twitter do organizador</label>
+                        <input ng-model="evento.organizers.twitter" class="form-control" id="organizers.twitter" placeholder="@username" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="botoes">
+                <input type="button" class="btn btn-default" ng-click="clickClose()" value="Cancelar"/>
+                <input type="submit" class="btn btn-primary" ng-click="clickEnviar()" value="Cadastrar"/>
+            </div>
+
+        </div>
+
+    </form>
+</div>

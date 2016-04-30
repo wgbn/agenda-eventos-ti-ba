@@ -25,5 +25,7 @@
     "url": "https://github.com/wgbn/agenda-eventos-ti-ba/issues"
   },
   "homepage": "https://github.com/wgbn/agenda-eventos-ti-ba",
-  "dependencies": {}
+  "dependencies": {
+    "jquery-mask-plugin": "^1.14.0"
+  }
 }

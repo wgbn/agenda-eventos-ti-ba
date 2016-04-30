@@ -3,19 +3,7 @@ agenda
         return {
             require: 'ngModel',
             link: function(scope, elemento, attrs, ctrl){
-                var formataData = function(data){
-                    data = data.replace(/[^0-9]+/g, '');
-                    if (data.length > 2)
-                        data = data.substring(0,2) + '/' + data.substring(2);
-                    if (data.length > 5)
-                        data = data.substring(0,5) + '/' + data.substring(5,9);
-                    return data;
-                };
-
-                elemento.bind('keyup', function(){
-                    ctrl.$setViewValue(formataData(ctrl.$viewValue));
-                    ctrl.$render();
-                });
+                elemento.mask("00/00/0000", {placeholder: "__/__/____"});
             }
         };
     })
@@ -24,17 +12,16 @@ agenda
         return {
             require: 'ngModel',
             link: function(scope, elemento, attrs, ctrl){
-                var formataHora = function(hora){
-                    hora = hora.replace(/[^0-9]+/g, '');
-                    if (hora.length > 2)
-                        hora = hora.substring(0,2) + ':' + hora.substring(2,4);
-                    return hora;
-                };
+                elemento.mask("00:00", {placeholder: "__:__"});
+            }
+        };
+    })
 
-                elemento.bind('keyup', function(){
-                    ctrl.$setViewValue(formataHora(ctrl.$viewValue));
-                    ctrl.$render();
-                });
+    .directive('wgbnDataHora', function(){
+        return {
+            require: 'ngModel',
+            link: function(scope, elemento, attrs, ctrl){
+                elemento.mask("00/00/0000 00:00", {placeholder: "__/__/____ __:__"});
             }
         };
     })
@@ -42,21 +29,34 @@ agenda
     .directive('wgbnEvento', function(){
         return {
             restrict: 'E',
-            transclude: false,
-            scope: true,
-            controller: function($scope, $location) {
-                $scope.clickEvento = function(){
-                    console.log($scope.evento.site);
-                    window.location.href = $scope.evento.site.substr(0,4) == 'http' ? $scope.evento.site : 'http://'+$scope.evento.site;
+            templateUrl: 'assets/templates/componentes/wgbn-evento.html',
+            scope: {
+                evento: '='
+            },
+            link: function(scope) {
+                scope.evento.event_start = parseDate(scope.evento.event_start, true);
+                scope.evento.event_end = parseDate(scope.evento.event_end, true);
+                if (scope.evento.cfp_start) scope.evento.cfp_start = parseDate(scope.evento.cfp_start);
+                if (scope.evento.cfp_end) scope.evento.cfp_end = parseDate(scope.evento.cfp_end);
+
+                scope.clickSite = function(){
+                    window.location.href = scope.evento.website.substr(0,4) == 'http' || scope.evento.website.substr(0,4) == 'https' ? scope.evento.website : 'http://'+scope.evento.website;
                 };
-                delete $scope.evento.$$hashKey;
-            },
-            replace: false,
-            controllerAs: 'evtCtrl',
-            bindToController: {
-                evento: "="
-            },
-            templateUrl: 'templates/componentes/wgbn-evento.html'
+                scope.clickTwitter = function(){
+                    if (scope.evento.twitter)
+                     window.location.href = scope.evento.twitter.substr(0,4) == 'http' || scope.evento.twitter.substr(0,4) == 'https' ? scope.evento.twitter : 'http://twitter.com/'+scope.evento.twitter;
+                };
+
+                function parseDate(_date, _time){
+                    _time = _time || false;
+                    dt = new Date(_date);
+                    return r(dt.getDate())+'/'+r(dt.getMonth()+1)+'/'+dt.getFullYear()+(_time ? ' '+r(dt.getHours())+':'+r(dt.getMinutes()) : '');
+                }
+
+                function r(_i) {
+                    return _i < 10 ? '0'+_i : _i;
+                }
+            }
         }
     })
 
@@ -73,7 +73,7 @@ agenda
             bindToController: {
                 mes: "="
             },
-            templateUrl: 'templates/componentes/wgbn-semanas.html'
+            templateUrl: 'assets/templates/componentes/wgbn-semanas.html'
         }
     })
 ;

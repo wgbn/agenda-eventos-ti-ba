@@ -27,15 +27,13 @@
     "tests"
   ],
   "dependencies": {
-    "ng-polymer-elements": "~0.3.0",
     "angular": "~1.4.1",
     "ngDialog": "~0.4.0",
     "angularfire": "~1.1.2",
-    "paper-elements": "PolymerElements/paper-elements#~1.0.1",
     "angular-route": "~1.4.1",
-    "iron-elements": "PolymerElements/iron-elements#~1.0.1",
-    "platinum-elements": "PolymerElements/platinum-elements#~1.0.1",
     "ocModal": "~0.1.10",
-    "calendrical": "*"
+    "calendrical": "*",
+    "Bootflat": "^2.0.4",
+    "bootstrap": "^3.3.6"
   }
 }
