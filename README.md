@@ -1,4 +1,6 @@
-# Agenda de Eventos de TI na Bahia
+# (Projeto descontinuado por falta de adesão da comunidade 2016-05-23)
+
+## Agenda de Eventos de TI na Bahia
 
 Projeto de criação de uma agenda de eventos de TI na Bahia, feita em AngularJs com persistência em Firebase.
 
