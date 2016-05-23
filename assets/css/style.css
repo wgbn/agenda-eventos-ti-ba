@@ -1,3 +1,6 @@
+body {
+    background-color: #eaeaea;
+}
 .clearfix {
     overflow: auto;
     zoom: 1;
@@ -21,8 +24,8 @@ p {
     padding-bottom: .4em;
 }
 .agenda {
-    max-width: 960px;
-    margin: auto;
+    box-sizing: border-box;
+    margin: .5em 1em;
 }
 .barra-navega {
     border-radius: 0;
